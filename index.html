@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendigo</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="header__logo">VENDIGO</h1>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item hover-container"><a href="#about" data-translate="about">Обо мне</a></li>
+                <li class="nav-item hover-container"><a href="#skills" data-translate="skills">Навыки</a></li>
+                <li class="nav-item hover-container"><a href="#projects" data-translate="projects">Проекты</a></li>
+                <li class="nav-item hover-container"><a href="#contacts" data-translate="contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="translation" >
+            <button class="translation__button"  onclick="changeLanguage('en')">English</button>
+            <button class="translation__button"  onclick="changeLanguage('ru')">Русский</button>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="background-img"></div>
+        <div class="wrapper">
+            <section class="head">
+                <p class="head__text" data-translate="programming_is_fun">Программирование весело</p>
+                <h1 class="head__title" data-translate="web_developer_portfolio_site">Сайт портфолио веб-разработчика</h1>
+                <button class="head__button hover-container"><p><a href="#projects" data-translate="projects">Проекты</a></p></button>
+            </section>
+
+            <section class="about" id="about">
+                <h1 class="about__title" data-translate="about_me">Обо мне</h1>
+                <div class="about-line"></div>
+                <div class="about__subtitle">
+                    <p class="about__subtitle1" data-translate="junior_frontend_developer">Младший фронтенд-разработчик</p>
+                    <p class="about__subtitle2" data-translate="intro_text">Привет, меня зовут Денис, я младший фронтенд-разработчик с пылающим желанием создавать удивительные пользовательские интерфейсы. Моя страсть к веб-разработке вдохновляет меня постоянно изучать новые технологии и методы. Готов взяться за любую задачу и стремлюсь расти профессионально каждый день.</p>
+                    <p class="about__subtitle3" data-translate="project_opportunity">Каждый проект для меня — это возможность не только применить свои знания, но и постоянно расти в своих навыках. Я убежден, что самый важный аспект разработки — это способность решать проблемы и находить креативные подходы к реализации задач.</p>
+                </div>
+            </section>
+
+            <section class="skills" id="skills">
+                <h2 data-translate="skills">Навыки</h2>
+                <div class="skills-list">
+                    <div class="skill hover-container">
+                        <p>HTML5</p>
+                    </div>
+                    <div class="skill hover-container">
+                        <p>CSS3</p>
+                    </div>
+                    <div class="skill hover-container">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="skill hover-container">
+                        <p>Python</p>
+                    </div>
+                    <div class="skill hover-container">
+                        <p>Django</p>
+                    </div>
+                    <div class="skill hover-container">
+                        <p>React</p>
+                    </div>
+                    <div class="skill hover-container">
+                        <p>jQuery</p>
+                    </div>
+                    <div class="skill hover-container">
+                        <p>GSAP</p>
+                    </div>
+                    <div class="skill hover-container">
+                        <p>Tailwind CSS</p>
+                    </div>
+                    <div class="skill hover-container">
+                        <p>Bootstrap</p>
+                    </div>
+                    <div class="skill hover-container">
+                        <p>WordPress</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects" id="projects">
+                <h1 class="projects__title" data-translate="projects">Проекты</h1>
+                <div class="container">
+                    <div class="items ">
+                        <div class="item hover-container" tabindex="1" style="background-image: url(./assets/yourbank.jpg)"><a class="text" href="https://github.com/Vendifo/yourbank">github</a></div>
+                        <div class="item hover-container" tabindex="1" style="background-image: url(./assets/parfume.png)"><a class="text" href="https://github.com/Vendifo/Parfume">github</a></div>
+                        <div class="item hover-container" tabindex="1" style="background-image: url(/assets/Endshool.jpg)"><a class="text" href="https://github.com/Vendifo/EndSchool">github</a></div>
+                        <div class="item hover-container" tabindex="1" style="background-image: url(./assets/solona.jpg)"><a class="text" href="https://paradoksi.github.io/index.html">github</a></div>
+                        <div class="item hover-container" tabindex="1" style="background-image: url(./assets/lazarevskoe.jpg)"><a class="text" href="https://vendifo.github.io/">github</a></div>
+                        <div class="item hover-container" tabindex="1" style="background-image: url(./assets/pointer-labs.jpg)"><a class="text" href="https://github.com/Vendifo/yourbank">github</a></div>
+                        <div class="item hover-container" tabindex="1" style="background-image: url(./assets/razbor.jpg)"><a class="text" href="https://github.com/ParadoksI/razbor-franchise">github</a></div>
+                        <div class="item hover-container" tabindex="1" style="background-image: url(./assets/travel.jpg)"><a class="text" href="https://github.com/Vendifo/tour">github</a></div>
+                        <div class="item hover-container" tabindex="1" style="background-image: url(./assets/cuberpank.jpg)"><a class="text" href="https://github.com/Vendifo/yourbank">github</a></div>
+                        <div class="item hover-container" tabindex="1" style="background-image: url(./assets/furniture.jpg)"><a class="text" href="https://github.com/Vendifo/furniture">github</a></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer" id="contacts">
+        <div class="footer__container">
+            <h1 class="footer__title" data-translate="contacts">Контакты</h1>
+            <div class="footer__list">
+                <a class="footer__item hover-container" href="https://github.com/Vendifo"><img src="./assets/github.svg" alt=""></a>
+                <a class="footer__item hover-container" href="https://t.me/Vendifo"><img src="./assets/telegram.svg" alt=""></a>
+                <a class="footer__item hover-container" href="https://vk.com/risseb"><img src="./assets/vk.svg" alt=""></a>
+            </div>
+            <div class="footer__down">
+                <p class="footer__subtext hover-container"><a href="mailto:dk7524061@gmail.com">dk7524061@gmail.com</a></p>
+                <p class="footer__subtext">©Vendigo2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="custom-cursor"></div>
+
+    <script src="./js/blur.js"></script>
+    <script src="./js/stack.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/translations-ru.js"></script>
+    <script src="./js/translations-en.js"></script>
+</body>
+
+</html>
