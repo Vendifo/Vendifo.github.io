@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Задаем минимальную высоту для body, чтобы футер всегда был внизу */
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            /* Позволяет main занять все доступное пространство */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <header class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6">
+            <h1 class="text-3xl font-bold">Контактная Информация</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+        <button onclick="goBack()"
+            class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded mb-6">
+            ← Назад
+        </button>
+        <h2 class="text-2xl font-semibold mb-4">Связаться с нами</h2>
+        <p class="mb-4">Мы всегда рады вашим вопросам и предложениям. Пожалуйста, заполните форму ниже или свяжитесь с
+            нами по указанным контактам.</p>
+
+        <div class="flex flex-col md:flex-row md:space-x-6">
+            <!-- Контактные данные -->
+            <div class="flex-1 mb-6">
+                <h3 class="text-xl font-semibold">Наши Контакты</h3>
+                
+                <p class="mt-1 text-gray-700">Адрес: г. Чита, Забайкальский край, ул. Фрунзе, д. 10</p>
+
+
+                <p class="mt-1 text-gray-700"><strong>Исполнительный директор:</strong> Рабданова Екатерина Васильевна
+                </p>
+                
+
+                <h4 class="text-lg font-semibold mt-6">Учредители</h4>
+                <p class="mt-2 text-gray-700">Глебова Анна Александровна: <a href="tel:+89963148552"
+                        class="text-blue-500">8-996-314-85-52</a></p>
+                <p class="mt-1 text-gray-700">Винс Анна Сергеевна: <a href="tel:+89963124151"
+                        class="text-blue-500">8-996-312-41-51</a></p>
+
+
+                <h4 class="text-lg font-semibold mt-6">Контактные телефоны</h4>
+                <p class="mt-2 text-gray-700"><a href="tel:+89144406544" class="text-blue-500">8-914-440-65-44</a></p>
+
+                <h4 class="text-lg font-semibold mt-6">Адрес электронной почты</h4>
+                <p class="mt-2 text-gray-700"><a href="mailto:guran75zk@bk.ru" class="text-blue-500">guran75zk@bk.ru</a>
+                </p>
+            </div>
+
+
+            <!-- Форма обратной связи -->
+            <div class="flex-1 mb-6">
+                <h3 class="text-xl font-semibold">Обратная связь</h3>
+                <form action="#" method="POST" class="mt-4">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700">Ваше имя</label>
+                        <input type="text" id="name" name="name" required
+                            class="border border-gray-300 rounded w-full px-4 py-2">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700">Ваш Email</label>
+                        <input type="email" id="email" name="email" required
+                            class="border border-gray-300 rounded w-full px-4 py-2">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700">Сообщение</label>
+                        <textarea id="message" name="message" rows="4" required
+                            class="border border-gray-300 rounded w-full px-4 py-2"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="bg-gray-800 text-white hover:bg-gray-700 font-bold py-2 px-4 rounded">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:justify-between">
+                <!-- Логотип фонда -->
+                <div class="mb-6 md:mb-0">
+                    <img src="./assets/img/logo.png" alt="Логотип фонда" class="h-16">
+                </div>
+                <!-- Краткое описание миссии -->
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-semibold">Наша Миссия</h3>
+                    <p class="mt-2 text-gray-300">
+                        Мы оказываем финансовую, психологическую и юридическую поддержку участникам СВО и их семьям.
+                    </p>
+                </div>
+
+                <!-- Социальные сети -->
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-semibold">Социальные Сети</h3>
+                    <div class="flex space-x-4 mt-2">
+                        <a href="https://facebook.com" target="_blank" class="hover:text-red-600">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="hover:text-red-600">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="hover:text-red-600">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://vk.com" target="_blank" class="hover:text-red-600">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Контактная информация и полезные ссылки -->
+            <div class="mt-8 flex flex-col md:flex-row md:justify-between w-full">
+                <div class="md:flex md:space-x-6 w-full">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold">Полезные ссылки</h3>
+                        <ul class="mt-2 text-gray-300 space-y-1">
+                            <li><a href="./index.html" class="hover:text-white">Главная</a></li>
+                            <li><a href="./donation.html" class="hover:text-white">Пожертвование</a></li>
+                            <li><a href="./initiative.html" class="hover:text-white">Инициативные группы</a></li>
+                            <li><a href="./contact.html" class="hover:text-white">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold">Контактная Информация</h3>
+                        <p class="mt-2 text-gray-300">Фирменное наименование: Благотворительный Фонд «Сила в Единстве
+                            отряд Гуран»</p>
+                        <p class="mt-1 text-gray-300">Телефон: <a href="tel:+89144406544"
+                                class="text-blue-400">8-914-440-65-44</a></p>
+                        <p class="mt-1 text-gray-300">Электронная почта: <a href="mailto:guran75zk@bk.ru"
+                                class="text-blue-400">guran75zk@bk.ru</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Политика конфиденциальности и условия использования -->
+            <div class="mt-8 border-t border-gray-700 pt-4 text-center">
+                <a href="#" class="text-gray-300 hover:text-white mx-2">Политика конфиденциальности</a>
+                <span class="text-gray-300">|</span>
+                <a href="#" class="text-gray-300 hover:text-white mx-2">Условия использования</a>
+            </div>
+            <p class="text-center text-gray-400 mt-8 md:mt-0">&copy; 2024 Благотворительный Фонд «Сила в Единстве отряд
+                Гуран». Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>

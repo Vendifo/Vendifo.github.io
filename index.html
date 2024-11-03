@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
 </head>
@@ -25,7 +26,7 @@
 
         <!-- Логотип в левом верхнем углу -->
         <div class="absolute top-4 left-4 z-20">
-            <img src="./assets/img/logo.png" alt="Логотип фонда" class="w-20 h-auto logoIMG">
+            <img src="./assets/img/logo.png" alt="Логотип фонда" class="w-32 h-auto logoIMG">
         </div>
 
         <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
@@ -37,23 +38,24 @@
                 </h1>
 
                 <p class="mt-4 text-xl md:text-2xl font-light max-w-2xl mx-auto leading-relaxed">
-                    Финансовая, психологическая и юридическая поддержка участников СВО и их семей.
+                    Финансовая, психологическая юридическая и гуманитарную помощь участникам СВО и их семьям .
                 </p>
 
                 <div
                     class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 flex-wrap">
-                    <a href="#donate"
+                    <a href="donation.html"
                         class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full transition transform hover:scale-105 w-full sm:w-auto">
                         Сделать пожертвование
                     </a>
-                    <a href="#volunteer"
+                    <a href="./initiative.html"
                         class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-bold py-3 px-6 rounded-full transition transform hover:scale-105 w-full sm:w-auto">
-                        Стать волонтером
+                        Инициативная группа
                     </a>
-                    <a href="#contact"
+                    <a href="./contact.html"
                         class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-bold py-3 px-6 rounded-full transition transform hover:scale-105 w-full sm:w-auto">
                         Контакты
                     </a>
+
                 </div>
 
             </div>
@@ -65,39 +67,34 @@
     <!-- О нас -->
     <section id="about" class="py-16 bg-gray-200">
         <div class="container mx-auto px-6">
-
+    
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold text-gray-800">О Фонде</h2>
                 <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                    Благотворительный фонд «Сила в единстве отряд Гуран» создан для оказания помощи гражданам в условиях
-                    Специальной Военной Операции.
+                    Благотворительный фонд «Сила в Единстве Отряд ГУРАН» оказывает помощь гражданам, находящимся и пострадавшим в условиях Специальной Военной Операции. Мы объединяем усилия тех, кто хочет помочь людям в трудной ситуации, и организуем акции для сбора средств.
                 </p>
             </div>
-
-
-            <div class="grid grid-cols-1  gap-12">
-
-
+    
+            <div class="grid grid-cols-1 gap-12">
+    
                 <!-- Без контейнера -->
                 <div class="bg-white p-8 rounded-lg shadow-lg w-full">
                     <h3 class="text-2xl font-semibold text-gray-800 mb-4">Цели и Миссия Фонда</h3>
                     <p class="text-gray-600 mb-4">
-                        Мы оказываем помощь участникам Специальной Военной Операции, их семьям, а также мобилизованным
-                        гражданам, добровольцам. Наша миссия — финансовая, психологическая и юридическая поддержка для
-                        улучшения их благосостояния и морального духа.
+                        Наша цель — создать сообщество поддержки, где каждый может внести свой вклад. Присоединяйтесь к нам, чтобы вместе помочь нуждающимся. Узнайте больше о наших инициативах и как вы можете поучаствовать на нашем сайте.
                     </p>
                     <p class="text-gray-600">
-                        Мы стремимся создать условия для оказания помощи нуждающимся и содействовать их социальной
-                        защите и реабилитации.
+                        Мы оказываем помощь участникам Специальной Военной Операции, их семьям, а также мобилизованным гражданам и добровольцам. Наша миссия — финансовая, психологическая и юридическая поддержка для улучшения их благосостояния и морального духа.
+                    </p>
+                    <p class="text-gray-600">
+                        Мы стремимся создать условия для оказания помощи нуждающимся и содействовать их социальной защите и реабилитации.
                     </p>
                 </div>
-
-
-
-
+    
             </div>
         </div>
     </section>
+    
 
     <!-- Как помочь -->
     <section id="how-to-help" class="py-16 bg-gray-50">
@@ -132,8 +129,9 @@
                         Присоединяйтесь к команде волонтеров и помогите нам в организации мероприятий и поддержке
                         участников.
                     </p>
-                    <a href="#volunteer" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg">
-                        Стать волонтером
+                    <a href="./initiative.html"
+                        class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg">
+                        Инициативная группа
                     </a>
                 </div>
 
@@ -181,30 +179,67 @@
         <div class="container mx-auto px-6">
     
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">Виды помощи</h2>
+                <h2 class="text-4xl font-bold text-gray-800">Наши направления работы</h2>
                 <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                    Мы оказываем всестороннюю помощь участникам СВО и их семьям. Ниже представлены основные виды нашей
-                    поддержки.
+                    Благотворительный общественно полезный фонд, оказывающий помощь гражданам в условиях Специальной Военной Операции, занимается предоставлением поддержки и ресурсов для людей, оказавшихся в сложных жизненных обстоятельствах.
                 </p>
             </div>
     
-            <!-- Центрирование блока -->
-            <div class="flex justify-center">
+            <div class="flex flex-wrap justify-center gap-8">
+    
+                <!-- Гуманитарная помощь -->
                 <div class="bg-gray-50 p-8 rounded-lg shadow-lg max-w-md">
                     <div class="flex items-center justify-center mb-4">
-                        <img src="./assets/img/photo_2024-09-24_21-50-45.jpg" alt="Юридическая поддержка" class="w-12 h-12">
+                        <i class="fas fa-hand-holding-heart fa-3x text-gray-600"></i> <!-- Иконка гуманитарной помощи -->
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Гуманитарная помощь</h3>
+                    <p class="text-gray-600 text-center">
+                        Предоставление продовольствия, одежды, медикаментов и других необходимых товаров для удовлетворения базовых потребностей пострадавших граждан, а также помощь мирным жителям Донецкой и Луганской Народных республик.
+                    </p>
+                </div>
+    
+                <!-- Психологическая поддержка -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg max-w-md">
+                    <div class="flex items-center justify-center mb-4">
+                        <i class="fas fa-comments fa-3x text-gray-600"></i> <!-- Иконка психологической поддержки -->
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Психологическая поддержка</h3>
+                    <p class="text-gray-600 text-center">
+                        Организация консультаций и сеансов с психологами для помощи людям, испытывающим стресс и тревогу в результате военных действий.
+                    </p>
+                </div>
+    
+                <!-- Юридическая поддержка -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg max-w-md">
+                    <div class="flex items-center justify-center mb-4">
+                        <i class="fas fa-gavel fa-3x text-gray-600"></i> <!-- Иконка юридической поддержки -->
                     </div>
                     <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Юридическая поддержка</h3>
                     <p class="text-gray-600 text-center">
-                        Предоставляем бесплатную юридическую помощь, консультируем по вопросам оформления и
-                        предоставления мер социальной поддержки.
+                        Предоставление консультаций по вопросам правовой защиты и помощи в оформлении необходимых документов.
                     </p>
                 </div>
+    
+                <!-- Волонтерская деятельность -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg max-w-md">
+                    <div class="flex items-center justify-center mb-4">
+                        <i class="fas fa-user-friends fa-3x text-gray-600"></i> <!-- Иконка волонтерской деятельности -->
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Волонтерская деятельность</h3>
+                    <p class="text-gray-600 text-center">
+                        Привлечение волонтеров для участия в инициативах фонда, направленных на поддержку пострадавших граждан, включая помощь детским домам и госпиталям на территории ЛНР и ДНР.
+                    </p>
+                </div>
+    
             </div>
-            
+    
         </div>
     </section>
     
+    
+    
+    
+
 
 
 
@@ -262,21 +297,19 @@
             <div class="mt-12 text-center">
                 <h3 class="text-3xl font-bold text-gray-800 mb-6">Помогите делом</h3>
                 <form action="#" method="POST" class="max-w-xl mx-auto">
-                    <div
-                        class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
-
+                    <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
                         <input type="number" name="donation" placeholder="Введите сумму"
                             class="w-full md:w-1/2 py-3 px-4 rounded-lg bg-gray-200 text-gray-800" required>
-
-                        <button type="submit"
-                            class="w-full md:w-1/2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg">
+                        
+                        <a href="./donation.html" class="w-full md:w-1/2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-center">
                             Сделать пожертвование
-                        </button>
+                        </a>
                     </div>
                     <p class="text-sm text-gray-500 mt-4">Все пожертвования направляются на поддержку участников СВО и
                         их семей.</p>
                 </form>
             </div>
+            
         </div>
     </section>
 
@@ -321,73 +354,7 @@
     </div>
     </section>
 
-    <!-- Отзывы -->
-    <section id="testimonials" class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <!-- Заголовок секции -->
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">Отзывы</h2>
-                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                    Вот что говорят участники и их семьи, получившие поддержку от нашего фонда.
-                </p>
-            </div>
 
-            <!-- Отзывы -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Отзыв 1 -->
-                <div class="bg-white rounded-lg shadow-lg p-6 transition transform hover:scale-105 duration-300">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Алексей Иванов</h3>
-                    <p class="text-gray-600 mb-4">
-                        "Благодаря фонду я получил необходимую помощь в трудный момент. Их поддержка помогла мне и моей
-                        семье справиться с трудностями."
-                    </p>
-                    <p class="text-right text-gray-500 italic">Семья Ивановых</p>
-                </div>
-
-                <!-- Отзыв 2 -->
-                <div class="bg-white rounded-lg shadow-lg p-6 transition transform hover:scale-105 duration-300">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Мария Петрова</h3>
-                    <p class="text-gray-600 mb-4">
-                        "Я была поражена вниманием и заботой, которые проявили волонтеры фонда. Их помощь была для нас
-                        очень важной."
-                    </p>
-                    <p class="text-right text-gray-500 italic">Семья Петровых</p>
-                </div>
-
-                <!-- Отзыв 3 -->
-                <div class="bg-white rounded-lg shadow-lg p-6 transition transform hover:scale-105 duration-300">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Елена Сидорова</h3>
-                    <p class="text-gray-600 mb-4">
-                        "Фонд помог мне в реабилитации. Я смогла вернуться к нормальной жизни благодаря их поддержке."
-                    </p>
-                    <p class="text-right text-gray-500 italic">Елена</p>
-                </div>
-
-                <!-- Отзыв 4 -->
-                <div class="bg-white rounded-lg shadow-lg p-6 transition transform hover:scale-105 duration-300">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Сергей Николаев</h3>
-                    <p class="text-gray-600 mb-4">
-                        "Мы получили юридическую помощь, которая помогла нам решить наши проблемы. Огромное спасибо!"
-                    </p>
-                    <p class="text-right text-gray-500 italic">Семья Николаевых</p>
-                </div>
-            </div>
-
-            <!-- Видеообращение -->
-            <div class="mt-12">
-                <h3 class="text-3xl font-bold text-gray-800 text-center mb-6">Видеообращения</h3>
-                <div class="flex justify-center">
-                    <iframe class="rounded-lg shadow-lg" width="560" height="315"
-                        src="https://www.youtube.com/embed/example" title="Видеообращение" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <p class="text-center text-gray-600 mt-4">
-                    Посмотрите, как наш фонд помог людям в трудной ситуации.
-                </p>
-            </div>
-        </div>
-    </section>
     <!-- Контакты-->
     <section id="contact" class="py-16 bg-gray-100">
         <div class="container mx-auto px-6">
@@ -402,15 +369,30 @@
             <!-- Контактная информация -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-2xl font-semibold text-gray-800">Наши Контакты</h3>
-                    <p class="mt-4 text-lg text-gray-700">
-                        <strong>Адрес:</strong> г. Чита, Забайкальский край, ул. Примерная, д. 1
+                    <h3 class="text-xl font-semibold">Наши Контакты</h3>
+
+                    <p class="mt-1 text-gray-700">Адрес: г. Чита, Забайкальский край, ул. Фрунзе, д. 10</p>
+
+
+                    <p class="mt-1 text-gray-700"><strong>Исполнительный директор:</strong> Рабданова Екатерина
+                        Васильевна
                     </p>
-                    <p class="mt-2 text-lg text-gray-700">
-                        <strong>Телефон:</strong> +7 (123) 456-78-90
+
+
+                    <h4 class="text-lg font-semibold mt-6">Учредители</h4>
+                    <p class="mt-2 text-gray-700">Глебова Анна Александровна: <a href="tel:+89963148552"
+                            class="text-blue-500">8-996-314-85-52</a></p>
+                    <p class="mt-1 text-gray-700">Винс Анна Сергеевна: <a href="tel:+89963124151"
+                            class="text-blue-500">8-996-312-41-51</a></p>
+
+
+                    <h4 class="text-lg font-semibold mt-6">Контактные телефоны</h4>
+                    <p class="mt-2 text-gray-700"><a href="tel:+89144406544" class="text-blue-500">8-914-440-65-44</a>
                     </p>
-                    <p class="mt-2 text-lg text-gray-700">
-                        <strong>Email:</strong> info@foundation-example.ru
+
+                    <h4 class="text-lg font-semibold mt-6">Адрес электронной почты</h4>
+                    <p class="mt-2 text-gray-700"><a href="mailto:guran75zk@bk.ru"
+                            class="text-blue-500">guran75zk@bk.ru</a>
                     </p>
                 </div>
 
@@ -443,9 +425,11 @@
             <!-- Карта -->
             <div class="w-full h-64 md:h-96">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202128.123456789!2d113.4832!3d52.0332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5eae604f4d6e3b89%3A0x63cd682c9c4d3b2c!2z0JvQvtCz0YDQvtCz0L7QsdC70L7Qt9Cw0LrQvtCx0L7QsdC70L7QvA!5e0!3m2!1sru!2sru!4v1648463287343!5m2!1sru!2sru"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3256.5311233212795!2d113.49397921512903!3d52.046668579560154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5dca354355503461%3A0x4c5f6357b73b47e7!2z0JvQvtCz0YDQvtCz0L7QsdC70L7Qt9Cw0LrQvtCx0L7QsdC70L7QvA!5e0!3m2!1sru!2sru!4v1648463287343!5m2!1sru!2sru"
                     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
+            
+            
         </div>
     </section>
 
@@ -485,13 +469,31 @@
                 </div>
             </div>
 
-            <!-- Контактная информация -->
-            <div class="mt-8">
-                <h3 class="text-xl font-semibold">Контактная Информация</h3>
-                <p class="mt-2 text-gray-300">Адрес: г. Чита, Забайкальский край</p>
-                <p class="mt-1 text-gray-300">Телефон: +7 (123) 456-78-90</p>
-                <p class="mt-1 text-gray-300">Электронная почта: info@guranfoundation.ru</p>
+            <!-- Контактная информация и полезные ссылки -->
+            <div class="mt-8 flex flex-col md:flex-row md:justify-between w-full">
+                <div class="md:flex md:space-x-6 w-full">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold">Полезные ссылки</h3>
+                        <ul class="mt-2 text-gray-300 space-y-1">
+                            <li><a href="./index.html" class="hover:text-white">Главная</a></li>
+                            <li><a href="./donation.html" class="hover:text-white">Пожертвование</a></li>
+                            <li><a href="./initiative.html" class="hover:text-white">Инициативные группы</a></li>
+                            <li><a href="./contact.html" class="hover:text-white">Контакты</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold">Контактная Информация</h3>
+                        <p class="mt-2 text-gray-300">Фирменное наименование: Благотворительный Фонд «Сила в Единстве
+                            отряд Гуран»</p>
+                        <p class="mt-1 text-gray-300">Телефон: <a href="tel:+89144406544"
+                                class="text-blue-400">8-914-440-65-44</a></p>
+                        <p class="mt-1 text-gray-300">Электронная почта: <a href="mailto:guran75zk@bk.ru"
+                                class="text-blue-400">guran75zk@bk.ru</a></p>
+                    </div>
+                </div>
             </div>
+
 
             <!-- Политика конфиденциальности и условия использования -->
             <div class="mt-8 border-t border-gray-700 pt-4 text-center">
