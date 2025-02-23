@@ -1,0 +1,99 @@
+/* Fullscreen background video */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Center content on top of video */
+.content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+}
+
+/* Dark overlay to reduce brightness of the video */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+/* Full screen section */
+.full-screen-section {
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Collection section (third screen) */
+.collection-section {
+    padding:  20px;
+    background: #1a1a1a;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.collection-header {
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f1f1f1;
+}
+
+
+
+/* Анимация появления элементов при прокрутке */
+.step-appear {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.step-appear-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

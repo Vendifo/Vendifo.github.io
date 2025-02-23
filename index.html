@@ -1,513 +1,277 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Благотворительный фонд «Сила в единстве отряд Гуран»</title>
-
-
-    <link rel="stylesheet" href="./css/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Centered Transparent Navigation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
-<body class="antialiased bg-gray-200 text-gray-900">
+<body class="bg-black text-white">
 
-    <!-- Шапка -->
-    <section class="relative w-full h-screen bg-cover bg-center"
-        style="background-image: url('./assets/img/1781636590_0_79_3072_1807_1920x1080_80_0_0_198678bab3368d1639b0b8831d2ada57.jpg');">
+    <!-- Background Video (First Screen) -->
+    <video class="video-background" autoplay loop muted>
+        <source src="./assets/movie_054.mp4" type="video/mp4">
+    </video>
 
-        <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-75"></div>
+    <!-- Overlay for darker tone -->
+    <div class="video-overlay absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
 
-        <!-- Логотип в левом верхнем углу -->
-        <div class="absolute top-4 left-4 z-20">
-            <img src="./assets/img/logo.png" alt="Логотип фонда" class="w-32 h-auto logoIMG">
+    <!-- Header and Navigation Menu -->
+    <header class="content fixed w-full top-0 left-0 z-10 bg-black bg-opacity-60 py-4">
+        <nav>
+            <ul class="flex justify-center space-x-12">
+                <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+                <li><a href="#collection" class="hover:text-blue-500">Collection</a></li>
+                <li><a href="#roadmap" class="hover:text-blue-500">Road Map</a></li>
+                <li><a href="#socials" class="hover:text-blue-500">Socials</a></li>
+                <li><a href="#buy" class="hover:text-blue-500">Buy</a></li>
+                <li><button id="language-toggle" class="text-lg">🌐</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- First Screen Section (Background video) -->
+    <section class="full-screen-section h-screen flex justify-center items-center text-center text-white" id="home">
+        <h1 class="text-5xl font-bold">Welcome to Our NFT Collection</h1>
+        <p class="text-xl mt-4">Explore and discover unique NFTs that tell a story.</p>
+    </section>
+
+    <section class="collection-section py-16 bg-gray-900" id="collection">
+        <div class="collection-header text-center mb-12">
+            <h2 class="text-4xl text-white mb-4">Explore Our Models</h2>
+            <p class="text-xl text-white">Discover exclusive 3D models in action.</p>
         </div>
-
-        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-            <div class="max-w-4xl px-4 fade-in">
-
-                <h1
-                    class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mt-4 mb-6 text-center">
-                    Благотворительный фонд «Сила в единстве отряд Гуран»
-                </h1>
-
-                <p class="mt-4 text-xl md:text-2xl font-light max-w-2xl mx-auto leading-relaxed">
-                    Финансовая, психологическая юридическая и гуманитарную помощь участникам СВО и их семьям .
-                </p>
-
-                <div
-                    class="mt-10 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 flex-wrap">
-                    <a href="donation.html"
-                        class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full transition transform hover:scale-105 w-full sm:w-auto">
-                        Сделать пожертвование
-                    </a>
-                    <a href="./initiative.html"
-                        class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-bold py-3 px-6 rounded-full transition transform hover:scale-105 w-full sm:w-auto">
-                        Инициативная группа
-                    </a>
-                    <a href="./contact.html"
-                        class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-bold py-3 px-6 rounded-full transition transform hover:scale-105 w-full sm:w-auto">
-                        Контакты
-                    </a>
-
+        <div class="collection-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4">
+            <div class="card relative group">
+                <div class="card-image overflow-hidden rounded-lg">
+                    <img class="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-0" src="./assets/photo_2025-02-24_06-53-12.jpg" alt="Model 1" />
                 </div>
-
+                <div class="card-video absolute top-0 left-0 w-full h-full bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <video class="w-full h-full object-cover" autoplay loop muted>
+                        <source src="./assets/movie_085.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="card-info absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent text-white p-4">
+                    <h3 class="text-2xl font-bold">Model 1</h3>
+                    <p class="text-sm">3D model of a futuristic robot.</p>
+                </div>
+            </div>
+            <div class="card relative group">
+                <div class="card-image overflow-hidden rounded-lg">
+                    <img class="w-full h-64 object-cover transition-opacity duration-300 group-hover:opacity-0" src="./assets/photo_2025-02-24_06-53-12.jpg" alt="Model 2" />
+                </div>
+                <div class="card-video absolute top-0 left-0 w-full h-full bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <video class="w-full h-full object-cover" autoplay loop muted>
+                        <source src="./assets/movie_085.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="card-info absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent text-white p-4">
+                    <h3 class="text-2xl font-bold">Model 2</h3>
+                    <p class="text-sm">3D model of a futuristic car.</p>
+                </div>
             </div>
         </div>
     </section>
 
-
-
-    <!-- О нас -->
-    <section id="about" class="py-16 bg-gray-200">
-        <div class="container mx-auto px-6">
     
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">О Фонде</h2>
-                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                    Благотворительный фонд «Сила в Единстве Отряд ГУРАН» оказывает помощь гражданам, находящимся и пострадавшим в условиях Специальной Военной Операции. Мы объединяем усилия тех, кто хочет помочь людям в трудной ситуации, и организуем акции для сбора средств.
-                </p>
+    
+    
+
+    <section class="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg p-8 mb-12 mt-12 shadow-xl">
+        <h2 class="text-4xl font-bold text-white mb-6 text-center">Connect with Us!</h2>
+        <p class="text-lg text-white text-center mb-8">Follow us on social media for updates, fun content, and much more!</p>
+    
+        <div class="grid grid-cols-3 gap-10">
+            <!-- Twitter -->
+            <div class="social-card bg-white p-6 rounded-lg shadow-xl hover:scale-105 transition-all duration-300">
+                <div class="icon-container bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23 3a10.05 10.05 0 0 1-2.828.775A4.93 4.93 0 0 0 22.438 1.58a9.99 9.99 0 0 1-3.186 1.216A4.938 4.938 0 0 0 16.616.5a4.91 4.91 0 0 0-4.829 5.395 13.96 13.96 0 0 1-10.138-5.126A4.93 4.93 0 0 0 2.5 6.735a4.9 4.9 0 0 0 2.114.106A4.911 4.911 0 0 0 1.74 8.547a4.911 4.911 0 0 0 4.076-2.202c1.22 0 2.268-.833 2.633-2.06-.68.394-1.43.593-2.242.635.788-1.174 1.82-1.923 3.09-1.933 2.224 0 4.01 1.642 4.12 3.866.16.767-.241 1.673-.765 2.128a8.01 8.01 0 0 1-3.875-1.39c-2.531 2.674-5.725 5.623-9.289 6.036a9.955 9.955 0 0 0 11.021 4.374c3.616-1.708 6.113-5.358 6.264-9.67 0-.001 0-.002-.004-.003A9.987 9.987 0 0 0 23 3z"/>
+                    </svg>
+                </div>
+                <p class="text-center text-xl text-black">Twitter</p>
+                <a href="https://twitter.com/YourTwitterHandle" target="_blank" class="text-purple-600 font-semibold mt-4 block text-center hover:underline">Follow us on Twitter</a>
             </div>
     
-            <div class="grid grid-cols-1 gap-12">
-    
-                <!-- Без контейнера -->
-                <div class="bg-white p-8 rounded-lg shadow-lg w-full">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Цели и Миссия Фонда</h3>
-                    <p class="text-gray-600 mb-4">
-                        Наша цель — создать сообщество поддержки, где каждый может внести свой вклад. Присоединяйтесь к нам, чтобы вместе помочь нуждающимся. Узнайте больше о наших инициативах и как вы можете поучаствовать на нашем сайте.
-                    </p>
-                    <p class="text-gray-600">
-                        Мы оказываем помощь участникам Специальной Военной Операции, их семьям, а также мобилизованным гражданам и добровольцам. Наша миссия — финансовая, психологическая и юридическая поддержка для улучшения их благосостояния и морального духа.
-                    </p>
-                    <p class="text-gray-600">
-                        Мы стремимся создать условия для оказания помощи нуждающимся и содействовать их социальной защите и реабилитации.
-                    </p>
+            <!-- TikTok -->
+            <div class="social-card bg-white p-6 rounded-lg shadow-xl hover:scale-105 transition-all duration-300">
+                <div class="icon-container bg-black text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.358 3.011c1.052-.303 2.18-.475 3.332-.475 5.09 0 9.168 4.018 9.168 8.975 0 4.91-3.746 8.992-8.307 8.975-3.28-.014-5.996-2.272-6.974-5.352-.99-2.562-1.398-5.034-1.17-7.493.251-2.293 1.606-4.255 3.215-5.575zM16.358 8.195c-.346 2.738-.032 5.286 1.023 7.432 1.056 2.138 2.738 3.891 5.074 4.086-.619 2.113-2.404 3.76-4.693 3.867-2.442-.011-4.434-1.488-5.439-3.748-1.031-2.064-1.296-4.368-.839-6.69-.148.001-.295.004-.44.004-4.848 0-8.706 3.828-8.706 8.062 0 4.51 3.293 8.053 7.456 8.053 4.357 0 7.91-3.576 7.91-8.052 0-.251-.016-.5-.048-.748-.481-1.918-2.105-3.303-4.004-3.94z"/>
+                    </svg>
                 </div>
-    
+                <p class="text-center text-xl text-black">TikTok</p>
+                <a href="https://www.tiktok.com/@YourTikTokHandle" target="_blank" class="text-purple-600 font-semibold mt-4 block text-center hover:underline">Follow us on TikTok</a>
             </div>
-        </div>
-    </section>
     
-
-    <!-- Как помочь -->
-    <section id="how-to-help" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <!-- Заголовок секции -->
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">Как помочь</h2>
-                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                    Вы можете помочь фонду различными способами. Вот несколько вариантов участия.
-                </p>
-            </div>
-
-            <!-- Варианты помощи -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <!-- Пожертвование -->
-                <div
-                    class="bg-white rounded-lg shadow-lg p-6 text-center transition transform hover:scale-105 duration-300">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Пожертвование</h3>
-                    <p class="text-gray-600 mb-4">
-                        Сделайте пожертвование, чтобы помочь участникам СВО и их семьям в трудной ситуации.
-                    </p>
-                    <a href="#donate" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg">
-                        Сделать пожертвование
-                    </a>
+            <!-- Telegram -->
+            <div class="social-card bg-white p-6 rounded-lg shadow-xl hover:scale-105 transition-all duration-300">
+                <div class="icon-container bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C5.373 0 0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12c0-6.627-5.373-12-12-12zm6.355 8.062c-.045-.03-.094-.043-.143-.065-.07-.038-.138-.081-.208-.118-.239-.127-.491-.227-.739-.358-.572-.259-1.153-.567-1.712-.876-.678-.292-1.362-.612-2.033-.914-.71-.337-1.441-.688-2.178-1.026-.351-.163-.634-.342-.853-.598-.119-.125-.184-.271-.208-.426-.039-.175-.028-.359.024-.527.019-.046.016-.093-.009-.138-.025-.045-.074-.078-.12-.107-.175-.142-.357-.296-.528-.448-.601-.505-1.135-.914-1.727-1.48-.615-.609-1.157-1.252-1.724-1.947-.014-.022-.024-.046-.042-.065-.089-.087-.198-.152-.301-.23-.121-.086-.25-.147-.385-.222-.368-.179-.766-.309-1.16-.47-.315-.168-.617-.367-.924-.548-.505-.304-.973-.653-1.467-1.001-.286-.194-.582-.411-.855-.631-.399-.304-.763-.631-1.141-.963-.572-.528-.966-1.156-1.272-1.822-.265-.606-.455-1.265-.662-1.897-.106-.352-.303-.685-.565-1.017-.45-.52-.987-.922-1.572-1.264-.591-.348-1.234-.617-1.887-.748-.466-.084-.944-.141-1.423-.159-.104-.019-.188.034-.267.112-.573.48-1.122 1.034-1.617 1.641-.92.88-1.769 1.798-2.551 2.728-.04.073-.084.148-.126.223-.014.024-.017.051-.022.078.136-.443.13-.907-.025-1.323.308-.541.878-.899 1.463-1.099.379-.119.786-.202 1.189-.321.435-.124.849-.251 1.26-.379 1.004-.294 1.994-.657 2.975-.937.366-.106.693-.258 1.019-.396.315-.142.632-.274.95-.426.401-.184.798-.396 1.202-.59.699-.393 1.378-.803 2.044-1.227.417-.209.845-.426 1.268-.645.517-.273 1.013-.563 1.536-.874.91-.539 1.85-1.102 2.784-1.75.175-.11.333-.224.497-.342.197-.133.386-.276.564-.422.377-.347.73-.725 1.07-1.12 0-.002.01-.001.013-.004.192-.213.364-.441.543-.673.168-.216.352-.432.513-.658 1.573-1.845 2.868-3.735 3.65-5.845z"/>
+                    </svg>
                 </div>
-
-                <!-- Волонтерство -->
-                <div
-                    class="bg-white rounded-lg shadow-lg p-6 text-center transition transform hover:scale-105 duration-300">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Волонтерство</h3>
-                    <p class="text-gray-600 mb-4">
-                        Присоединяйтесь к команде волонтеров и помогите нам в организации мероприятий и поддержке
-                        участников.
-                    </p>
-                    <a href="./initiative.html"
-                        class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg">
-                        Инициативная группа
-                    </a>
-                </div>
-
-                <!-- Консультационная поддержка -->
-                <div
-                    class="bg-white rounded-lg shadow-lg p-6 text-center transition transform hover:scale-105 duration-300">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Консультационная поддержка</h3>
-                    <p class="text-gray-600 mb-4">
-                        Предоставьте консультационную помощь участникам СВО и их семьям по юридическим и социальным
-                        вопросам.
-                    </p>
-                    <a href="#consultation"
-                        class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg">
-                        Узнать больше
-                    </a>
-                </div>
-            </div>
-
-
-
-            <!-- Социальные сети -->
-            <div class="text-center">
-                <h3 class="text-2xl font-bold text-gray-800 mb-6">Следите за нами в социальных сетях</h3>
-                <div class="flex justify-center space-x-4">
-                    <a href="#" class="text-blue-600 hover:text-blue-800">
-                        <i class="fab fa-facebook-f fa-2x"></i>
-                    </a>
-                    <a href="#" class="text-blue-400 hover:text-blue-600">
-                        <i class="fab fa-twitter fa-2x"></i>
-                    </a>
-                    <a href="#" class="text-pink-600 hover:text-pink-800">
-                        <i class="fab fa-instagram fa-2x"></i>
-                    </a>
-                    <a href="#" class="text-red-600 hover:text-red-800">
-                        <i class="fab fa-youtube fa-2x"></i>
-                    </a>
-                </div>
-
-
+                <p class="text-center text-xl text-black">Telegram</p>
+                <a href="https://t.me/YourTelegramHandle" target="_blank" class="text-purple-600 font-semibold mt-4 block text-center hover:underline">Follow us on Telegram</a>
             </div>
         </div>
     </section>
+    
 
-    <section id="services" class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-    
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">Наши направления работы</h2>
-                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                    Благотворительный общественно полезный фонд, оказывающий помощь гражданам в условиях Специальной Военной Операции, занимается предоставлением поддержки и ресурсов для людей, оказавшихся в сложных жизненных обстоятельствах.
-                </p>
-            </div>
-    
-            <div class="flex flex-wrap justify-center gap-8">
-    
-                <!-- Гуманитарная помощь -->
-                <div class="bg-gray-50 p-8 rounded-lg shadow-lg max-w-md">
-                    <div class="flex items-center justify-center mb-4">
-                        <i class="fas fa-hand-holding-heart fa-3x text-gray-600"></i> <!-- Иконка гуманитарной помощи -->
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Гуманитарная помощь</h3>
-                    <p class="text-gray-600 text-center">
-                        Предоставление продовольствия, одежды, медикаментов и других необходимых товаров для удовлетворения базовых потребностей пострадавших граждан, а также помощь мирным жителям Донецкой и Луганской Народных республик.
-                    </p>
+
+    <section class="bg-gradient-to-r from-purple-800 to-indigo-900 text-white py-20 px-6">
+        <div class="max-w-screen-lg mx-auto text-center">
+            <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-400 mb-8">Get Started in Dream World</h2>
+            <p class="text-xl mb-12 max-w-2xl mx-auto">Purchase Dream Coins or exclusive NFTs to enter the Dream World universe. Unlock incredible gameplay, customize your experience, and earn rewards!</p>
+            
+            <!-- Cards for Buy Options -->
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Buy Dream Coins -->
+                <div class="bg-purple-600 rounded-lg p-8 shadow-xl transform transition duration-300 hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Buy Dream Coins</h3>
+                    <p class="text-lg mb-6">Buy Dream Coins to kickstart your journey and start earning rewards! These coins power up your in-game experience.</p>
+                    <a href="https://your-purchase-link.com" target="_blank" class="bg-gradient-to-r from-pink-500 to-yellow-400 hover:bg-gradient-to-l text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">Buy Dream Coins</a>
                 </div>
-    
-                <!-- Психологическая поддержка -->
-                <div class="bg-gray-50 p-8 rounded-lg shadow-lg max-w-md">
-                    <div class="flex items-center justify-center mb-4">
-                        <i class="fas fa-comments fa-3x text-gray-600"></i> <!-- Иконка психологической поддержки -->
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Психологическая поддержка</h3>
-                    <p class="text-gray-600 text-center">
-                        Организация консультаций и сеансов с психологами для помощи людям, испытывающим стресс и тревогу в результате военных действий.
-                    </p>
+                <!-- Buy NFTs -->
+                <div class="bg-indigo-600 rounded-lg p-8 shadow-xl transform transition duration-300 hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4">Buy Exclusive NFTs</h3>
+                    <p class="text-lg mb-6">Explore and purchase exclusive NFTs to enhance your Dream World experience. Each item offers unique abilities and boosts.</p>
+                    <a href="https://your-nft-marketplace-link.com" target="_blank" class="bg-gradient-to-r from-pink-500 to-yellow-400 hover:bg-gradient-to-l text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">Browse NFTs</a>
                 </div>
-    
-                <!-- Юридическая поддержка -->
-                <div class="bg-gray-50 p-8 rounded-lg shadow-lg max-w-md">
-                    <div class="flex items-center justify-center mb-4">
-                        <i class="fas fa-gavel fa-3x text-gray-600"></i> <!-- Иконка юридической поддержки -->
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Юридическая поддержка</h3>
-                    <p class="text-gray-600 text-center">
-                        Предоставление консультаций по вопросам правовой защиты и помощи в оформлении необходимых документов.
-                    </p>
-                </div>
-    
-                <!-- Волонтерская деятельность -->
-                <div class="bg-gray-50 p-8 rounded-lg shadow-lg max-w-md">
-                    <div class="flex items-center justify-center mb-4">
-                        <i class="fas fa-user-friends fa-3x text-gray-600"></i> <!-- Иконка волонтерской деятельности -->
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Волонтерская деятельность</h3>
-                    <p class="text-gray-600 text-center">
-                        Привлечение волонтеров для участия в инициативах фонда, направленных на поддержку пострадавших граждан, включая помощь детским домам и госпиталям на территории ЛНР и ДНР.
-                    </p>
-                </div>
-    
-            </div>
-    
-        </div>
-    </section>
-    
-    
-    
-    
-
-
-
-
-
-    <section id="events-news" class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">Мероприятия и новости</h2>
-                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                    Узнайте о предстоящих событиях и посмотрите отчеты о прошедших мероприятиях, организованных нашим
-                    фондом.
-                </p>
-            </div>
-
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <img src="./assets/img/Ярмарка.jpg" alt="Мероприятие 1"
-                        class="w-full h-48 object-cover rounded-md mb-4">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Благотворительная ярмарка</h3>
-                    <p class="text-gray-600 mb-4">
-                        Присоединяйтесь к нашей благотворительной ярмарке в Чите. Все собранные средства будут
-                        направлены на поддержку участников СВО.
-                    </p>
-                    <a href="#event-details" class="text-red-600 font-bold hover:text-red-800">Подробнее &rarr;</a>
-                </div>
-
-
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <img src="./assets/img/Конференция.jpg" alt="Мероприятие 2"
-                        class="w-full h-48 object-cover rounded-md mb-4">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Конференция о реабилитации</h3>
-                    <p class="text-gray-600 mb-4">
-                        Участники обсудят важные вопросы реабилитации и поддержки ветеранов СВО. Присоединяйтесь к
-                        обсуждению!
-                    </p>
-                    <a href="#event-details" class="text-red-600 font-bold hover:text-red-800">Подробнее &rarr;</a>
-                </div>
-
-
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <img src="./assets/img/Фестиваль.jpg" alt="Мероприятие 3"
-                        class="w-full h-48 object-cover rounded-md mb-4">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">Фестиваль в поддержку участников СВО</h3>
-                    <p class="text-gray-600 mb-4">
-                        Приходите на наш фестиваль, организованный в честь участников СВО и их семей. Мы ждем вас!
-                    </p>
-                    <a href="#event-details" class="text-red-600 font-bold hover:text-red-800">Подробнее &rarr;</a>
-                </div>
-            </div>
-
-
-            <div class="mt-12 text-center">
-                <h3 class="text-3xl font-bold text-gray-800 mb-6">Помогите делом</h3>
-                <form action="#" method="POST" class="max-w-xl mx-auto">
-                    <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
-                        <input type="number" name="donation" placeholder="Введите сумму"
-                            class="w-full md:w-1/2 py-3 px-4 rounded-lg bg-gray-200 text-gray-800" required>
-                        
-                        <a href="./donation.html" class="w-full md:w-1/2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-center">
-                            Сделать пожертвование
-                        </a>
-                    </div>
-                    <p class="text-sm text-gray-500 mt-4">Все пожертвования направляются на поддержку участников СВО и
-                        их семей.</p>
-                </form>
             </div>
             
-        </div>
-    </section>
-
-
-    <section id="success-stories" class="py-16 bg-gray-200"></section>
-    <div class="container mx-auto px-6">
-
-        <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold text-gray-800">Истории успеха</h2>
-            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                Реальные примеры помощи, которую оказал наш фонд. Узнайте, как мы поддерживаем участников СВО и их
-                семьи.
-            </p>
-        </div>
-
-        <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-2">Поддержка семье Ивановых</h3>
-            <p class="text-gray-600">
-                Семья Ивановых из Забайкальского края получила финансовую помощь на реабилитацию главы семьи,
-                участвовавшего в СВО. Наша поддержка помогла им восстановить стабильность в это трудное время.
-            </p>
-        </div>
-
-        <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-2">Юридическая поддержка</h3>
-            <p class="text-gray-600">
-                Наш фонд предоставил бесплатную юридическую консультацию и помощь в оформлении социальных льгот
-                для участников СВО. Это дало возможность многим семьям лучше понимать свои права и получать
-                необходимые ресурсы.
-            </p>
-        </div>
-
-        <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-2">Реабилитация в санатории</h3>
-            <p class="text-gray-600">
-                Ветеран СВО был отправлен на реабилитацию в санаторий при поддержке нашего фонда, что помогло
-                ему восстановить здоровье и вернуть уверенность в завтрашнем дне. Мы стремимся обеспечить
-                нашим героям необходимую помощь в их восстановлении.
-            </p>
-        </div>
-
-    </div>
-    </section>
-
-
-    <!-- Контакты-->
-    <section id="contact" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <!-- Заголовок секции -->
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800">Контакты</h2>
-                <p class="mt-4 text-lg text-gray-600">
-                    Мы всегда готовы помочь и ответить на ваши вопросы.
-                </p>
-            </div>
-
-            <!-- Контактная информация -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-xl font-semibold">Наши Контакты</h3>
-
-                    <p class="mt-1 text-gray-700">Адрес: г. Чита, Забайкальский край, ул. Фрунзе, д. 10</p>
-
-
-                    <p class="mt-1 text-gray-700"><strong>Исполнительный директор:</strong> Рабданова Екатерина
-                        Васильевна
-                    </p>
-
-
-                    <h4 class="text-lg font-semibold mt-6">Учредители</h4>
-                    <p class="mt-2 text-gray-700">Глебова Анна Александровна: <a href="tel:+89963148552"
-                            class="text-blue-500">8-996-314-85-52</a></p>
-                    <p class="mt-1 text-gray-700">Винс Анна Сергеевна: <a href="tel:+89963124151"
-                            class="text-blue-500">8-996-312-41-51</a></p>
-
-
-                    <h4 class="text-lg font-semibold mt-6">Контактные телефоны</h4>
-                    <p class="mt-2 text-gray-700"><a href="tel:+89144406544" class="text-blue-500">8-914-440-65-44</a>
-                    </p>
-
-                    <h4 class="text-lg font-semibold mt-6">Адрес электронной почты</h4>
-                    <p class="mt-2 text-gray-700"><a href="mailto:guran75zk@bk.ru"
-                            class="text-blue-500">guran75zk@bk.ru</a>
-                    </p>
+            <!-- Payment Options Section -->
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold mb-4">Accepted Payment Methods</h3>
+                <p class="text-lg mb-6">We support a variety of payment options for your convenience. Choose the method that works best for you and start your adventure today!</p>
+                <div class="flex justify-center space-x-6">
+                    <!-- Crypto Payment Icon -->
+                    <a href="https://crypto-payment-link.com" target="_blank" class="text-white text-4xl hover:text-pink-500 transition duration-300">
+                        <i class="fab fa-bitcoin"></i>
+                    </a>
+                    <!-- Credit Card Icon -->
+                    <a href="https://credit-card-payment-link.com" target="_blank" class="text-white text-4xl hover:text-pink-500 transition duration-300">
+                        <i class="fas fa-credit-card"></i>
+                    </a>
+                    <!-- PayPal Icon -->
+                    <a href="https://paypal-payment-link.com" target="_blank" class="text-white text-4xl hover:text-pink-500 transition duration-300">
+                        <i class="fab fa-paypal"></i>
+                    </a>
                 </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <div class="max-w-7xl mx-auto px-4 py-16">
+        <h2 class="text-4xl font-bold text-center text-white mb-12">Dream World Journey</h2>
+    
+        <!-- Step 1 -->
+        <div class="step relative w-full flex items-center mb-12" data-step="1">
+            <div class="step-dot w-6 h-6 bg-purple-600 text-white rounded-full flex justify-center items-center shadow-lg transition-all duration-500 opacity-0 step-appear">
+                <span class="text-sm font-semibold">1</span>
+            </div>
+            <div class="step-content ml-6 flex-1 bg-gray-800 rounded-lg p-8 shadow-xl opacity-0 transition-opacity duration-500 step-appear">
+                <h3 class="text-2xl text-white mb-4">1. Introduction: Dream World Vision</h3>
+                <p>Welcome to Dream World, the ultimate bridge between Web2 gaming and Web3 possibilities...</p>
+            </div>
+        </div>
+    
+        <!-- Step 2 -->
+        <div class="step relative w-full flex items-center mb-12" data-step="2">
+            <div class="step-dot w-6 h-6 bg-purple-600 text-white rounded-full flex justify-center items-center shadow-lg transition-all duration-500 opacity-0 step-appear">
+                <span class="text-sm font-semibold">2</span>
+            </div>
+            <div class="step-content ml-6 flex-1 bg-gray-800 rounded-lg p-8 shadow-xl opacity-0 transition-opacity duration-500 step-appear">
+                <h3 class="text-2xl text-white mb-4">2. The Hook: The Beginning of the Dream Journey</h3>
+                <p>Get ready for **The Hook**, the starting point of our journey...</p>
+            </div>
+        </div>
+    
+        <!-- Step 3 -->
+        <div class="step relative w-full flex items-center mb-12" data-step="3">
+            <div class="step-dot w-6 h-6 bg-purple-600 text-white rounded-full flex justify-center items-center shadow-lg transition-all duration-500 opacity-0 step-appear">
+                <span class="text-sm font-semibold">3</span>
+            </div>
+            <div class="step-content ml-6 flex-1 bg-gray-800 rounded-lg p-8 shadow-xl opacity-0 transition-opacity duration-500 step-appear">
+                <h3 class="text-2xl text-white mb-4">3. User Content Sandbox</h3>
+                <p>In the **User Content Sandbox**, players are creators...</p>
+            </div>
+        </div>
+    
+        <!-- Add more steps as needed -->
+    </div>
 
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="text-2xl font-semibold text-gray-800">Свяжитесь с Нами</h3>
-                    <form action="#" method="POST" class="mt-4">
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-700">Имя</label>
-                            <input type="text" id="name" name="name" required
-                                class="mt-1 block w-full border border-gray-300 rounded-lg p-2">
-                        </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-700">Email</label>
-                            <input type="email" id="email" name="email" required
-                                class="mt-1 block w-full border border-gray-300 rounded-lg p-2">
-                        </div>
-                        <div class="mb-4">
-                            <label for="message" class="block text-gray-700">Сообщение</label>
-                            <textarea id="message" name="message" rows="4" required
-                                class="mt-1 block w-full border border-gray-300 rounded-lg p-2"></textarea>
-                        </div>
-                        <button type="submit"
-                            class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg">
-                            Отправить
-                        </button>
+    <footer class="bg-gray-900 text-white py-16 px-6">
+        <div class="max-w-screen-xl mx-auto">
+            <!-- Footer Main Section -->
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- About Us Section -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">About Dream World</h3>
+                    <p class="text-lg">Dream World is a metaverse for social gaming, where players earn, interact, and create. Join us as we shape the future of gaming!</p>
+                </div>
+    
+                <!-- Social Media Links -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-6">
+                        <a href="https://twitter.com" target="_blank" class="text-2xl hover:text-yellow-400 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="https://tiktok.com" target="_blank" class="text-2xl hover:text-yellow-400 transition"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://telegram.org" target="_blank" class="text-2xl hover:text-yellow-400 transition"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+    
+                <!-- Newsletter Subscription -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Stay Updated</h3>
+                    <p class="text-lg mb-4">Subscribe to our newsletter for the latest news, updates, and exclusive offers!</p>
+                    <form action="#" method="POST" class="flex">
+                        <input type="email" placeholder="Enter your email" class="p-3 rounded-l-lg text-black w-full" />
+                        <button type="submit" class="bg-gradient-to-r from-pink-500 to-yellow-400 text-white py-3 px-6 rounded-r-lg hover:bg-gradient-to-l transition duration-300">Subscribe</button>
                     </form>
                 </div>
-            </div>
-
-            <!-- Карта -->
-            <div class="w-full h-64 md:h-96">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3256.5311233212795!2d113.49397921512903!3d52.046668579560154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5dca354355503461%3A0x4c5f6357b73b47e7!2z0JvQvtCz0YDQvtCz0L7QsdC70L7Qt9Cw0LrQvtCx0L7QsdC70L7QvA!5e0!3m2!1sru!2sru!4v1648463287343!5m2!1sru!2sru"
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            
-            
-        </div>
-    </section>
-
-    <!-- Футер -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row md:justify-between">
-                <!-- Логотип фонда -->
-                <div class="mb-6 md:mb-0">
-                    <img src="./assets/img/logo.png" alt="Логотип фонда" class="h-16">
+    
+                <!-- Contact Section -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Contact Us</h3>
+                    <p class="text-lg mb-4">For inquiries or support, reach out to us:</p>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-envelope"></i> support@dreamworld.com</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Dream World HQ, 123 Metaverse Street</li>
+                    </ul>
                 </div>
-                <!-- Краткое описание миссии -->
-                <div class="mb-6 md:mb-0">
-                    <h3 class="text-xl font-semibold">Наша Миссия</h3>
-                    <p class="mt-2 text-gray-300">
-                        Мы оказываем финансовую, психологическую и юридическую поддержку участникам СВО и их семьям.
-                    </p>
-                </div>
-
-                <!-- Социальные сети -->
-                <div class="mb-6 md:mb-0">
-                    <h3 class="text-xl font-semibold">Социальные Сети</h3>
-                    <div class="flex space-x-4 mt-2">
-                        <a href="https://facebook.com" target="_blank" class="hover:text-red-600">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://twitter.com" target="_blank" class="hover:text-red-600">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" class="hover:text-red-600">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://vk.com" target="_blank" class="hover:text-red-600">
-                            <i class="fab fa-vk"></i>
-                        </a>
+            </div>
+    
+            <!-- Footer Bottom Section -->
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex justify-between items-center">
+                    <p class="text-lg">&copy; 2025 Dream World. All Rights Reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="/terms" class="hover:text-yellow-400 transition">Terms of Service</a>
+                        <a href="/privacy" class="hover:text-yellow-400 transition">Privacy Policy</a>
                     </div>
                 </div>
-            </div>
-
-            <!-- Контактная информация и полезные ссылки -->
-            <div class="mt-8 flex flex-col md:flex-row md:justify-between w-full">
-                <div class="md:flex md:space-x-6 w-full">
-                    <div class="flex-1">
-                        <h3 class="text-xl font-semibold">Полезные ссылки</h3>
-                        <ul class="mt-2 text-gray-300 space-y-1">
-                            <li><a href="./index.html" class="hover:text-white">Главная</a></li>
-                            <li><a href="./donation.html" class="hover:text-white">Пожертвование</a></li>
-                            <li><a href="./initiative.html" class="hover:text-white">Инициативные группы</a></li>
-                            <li><a href="./contact.html" class="hover:text-white">Контакты</a></li>
-
-                        </ul>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-semibold">Контактная Информация</h3>
-                        <p class="mt-2 text-gray-300">Фирменное наименование: Благотворительный Фонд «Сила в Единстве
-                            отряд Гуран»</p>
-                        <p class="mt-1 text-gray-300">Телефон: <a href="tel:+89144406544"
-                                class="text-blue-400">8-914-440-65-44</a></p>
-                        <p class="mt-1 text-gray-300">Электронная почта: <a href="mailto:guran75zk@bk.ru"
-                                class="text-blue-400">guran75zk@bk.ru</a></p>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Политика конфиденциальности и условия использования -->
-            <div class="mt-8 border-t border-gray-700 pt-4 text-center">
-                <a href="#" class="text-gray-300 hover:text-white mx-2">Политика конфиденциальности</a>
-                <span class="text-gray-300">|</span>
-                <a href="#" class="text-gray-300 hover:text-white mx-2">Условия использования</a>
             </div>
         </div>
     </footer>
+    
+    <!-- Font Awesome CDN for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
 
+    <script src="./scripts.js">
+      
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 </body>
 
 </html>
